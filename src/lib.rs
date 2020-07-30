@@ -51,7 +51,8 @@ mod test {
     let contents = "\
       Rust:
       safe, fast, productive.
-      Pick three.";
+      Pick three.
+      Duct tape.";
     
     assert_eq!(vec!["safe, fast, productive."], search(query, contents))
   }
@@ -62,7 +63,8 @@ mod test {
     let contents = "\
       Rust:
       safe, fast, productive.
-      Pick three.";
+      Pick three.
+      Trust me.";
     
     assert_eq!(vec!["Rust:", "Trust me."], search(query, contents))
   }
