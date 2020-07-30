@@ -8,26 +8,38 @@ In the simplest use case, grep searches a specified file for a specified string.
 To do so, grep takes as its arguments a filename and a string. Then it reads the file, finds lines in that file that contain the string argument, and prints those lines.
 
 #### Examples use cases
-> Search `frog` into *resources/poeam.txt* file
+> Search `frog` into *resources/poem.txt* file
 
 ```
 $ cargo run frog resources/poem.txt
    Compiling minigrep v0.1.0 (file:///projects/minigrep)
     Finished dev [unoptimized + debuginfo] target(s) in 0.38s
-     Running `target/debug/minigrep frog poem.txt`
+     Running `target/debug/minigrep frog resources/poem.txt`
 How public, like a frog
 ```
 
-> Search `body` into *resources/poeam.txt* file
+> Search `body` into *resources/poem.txt* file
 
 ```
-$ cargo run body poem.txt
+$ cargo run body resources/poem.txt
    Compiling minigrep v0.1.0 (file:///projects/minigrep)
     Finished dev [unoptimized + debuginfo] target(s) in 0.0s
-     Running `target/debug/minigrep body poem.txt`
+     Running `target/debug/minigrep body resources/poem.txt`
 I’m nobody! Who are you?
 Are you nobody, too?
 How dreary to be somebody!
+```
+
+> Search `to` into *resources/poem.txt* file
+
+```
+$ CASE_INSENSITIVE=1 cargo run to resources/poem.txt
+    Finished dev [unoptimized + debuginfo] target(s) in 0.0s
+     Running `target/debug/minigrep to resources/poem.txt`
+Are you nobody, too?
+How dreary to be somebody!
+To tell your name the livelong day
+To an admiring bog!
 ```
 
 ##### References
