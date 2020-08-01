@@ -44,3 +44,4 @@ To an admiring bog!
 
 ##### References
 - [Rust Doc - chapter 12](https://doc.rust-lang.org/book/ch12-00-an-io-project.html)
+- [Rust Doc - chapter 13 for improving](https://doc.rust-lang.org/book/ch13-03-improving-our-io-project.html)
